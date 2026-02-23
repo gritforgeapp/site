@@ -1,0 +1,1518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      GritForge - Smart Goal & Habit Tracker | Achieve Goals, Quit Habits
+    </title>
+    <meta
+      name="description"
+      content="The goal tracker that's also your journal. Achieve your goals, quit bad habits, and reflect on your journey with smart coaching. Free download for iOS and Android."
+    />
+    <meta
+      name="keywords"
+      content="habit tracker, habit journal, quit habits app, smart habit coach, daily reflection app, habit tracking app, break bad habits, build good habits, streak tracker, goal journal"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="GritForge - Smart Goal & Habit Tracker" />
+    <meta
+      property="og:description"
+      content="The goal tracker that's also your journal. Achieve your goals, quit bad habits, and reflect on your journey with smart coaching."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/icon.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="apple-touch-icon" href="./assets/icon.png" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2383E2',
+              'primary-dark': '#1a6bc2',
+              secondary: '#10B981',
+              accent: '#F59E0B',
+              dark: '#1F2937',
+              light: '#F9FAFB',
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .gradient-bg {
+        background: #111827;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #2383e2 0%, #10b981 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased text-dark bg-white">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-2">
+            <img
+              src="./assets/icon.png"
+              alt="GritForge"
+              class="w-10 h-10 rounded-lg"
+            />
+            <span class="text-xl font-bold">GritForge</span>
+          </div>
+          <div class="hidden md:flex items-center gap-8">
+            <a
+              href="#features"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              >Features</a
+            >
+            <a
+              href="#how-it-works"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              >How It Works</a
+            >
+            <a
+              href="#faq"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              >FAQ</a
+            >
+          </div>
+          <a
+            href="#download"
+            class="bg-gray-900 hover:bg-black text-white px-5 py-2 rounded-full font-medium transition-colors"
+          >
+            Get Started
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="text-center lg:text-left">
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6"
+            >
+              Achieve Goals. Quit Habits.<br />
+              <span class="gradient-text">Grow Every Day.</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
+              GritForge combines goal tracking with daily journaling and smart
+              coaching - so you don't just log what you did, you understand why
+              it matters and what to do next.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
+              <a
+                href="#download"
+                class="inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-black text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105 shadow-lg shadow-gray-900/30"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                  />
+                </svg>
+                Download Now
+              </a>
+              <a
+                href="#how-it-works"
+                class="inline-flex items-center justify-center gap-2 border-2 border-gray-300 hover:border-gray-900 text-gray-700 hover:text-gray-900 px-8 py-4 rounded-full font-semibold text-lg transition-colors"
+              >
+                See How It Works
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="mt-6 text-sm text-gray-500">
+              Available on iOS and Android | 30-second setup
+            </p>
+          </div>
+
+          <!-- Hero Screenshot Placeholder -->
+          <div class="relative">
+            <div class="relative mx-auto w-72 sm:w-80">
+              <!-- iPhone Frame -->
+              <div class="relative">
+                <!-- Side buttons - Left (Silent switch + Volume) -->
+                <div class="absolute -left-[3px] top-[100px] w-[3px] h-[28px] bg-gray-700 rounded-l-sm"></div>
+                <div class="absolute -left-[3px] top-[148px] w-[3px] h-[44px] bg-gray-700 rounded-l-sm"></div>
+                <div class="absolute -left-[3px] top-[200px] w-[3px] h-[44px] bg-gray-700 rounded-l-sm"></div>
+                <!-- Side button - Right (Power) -->
+                <div class="absolute -right-[3px] top-[168px] w-[3px] h-[64px] bg-gray-700 rounded-r-sm"></div>
+
+                <!-- Phone body -->
+                <div class="bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800 rounded-[3rem] p-[10px] shadow-2xl ring-1 ring-gray-700/50">
+                  <!-- Screen -->
+                  <div class="relative bg-gray-100 rounded-[2.3rem] overflow-hidden aspect-[9/19.5]">
+                    <!-- Dynamic Island -->
+                    <div class="absolute top-0 left-0 right-0 z-10 flex justify-center pt-3">
+                      <div class="w-[90px] h-[25px] bg-black rounded-full flex items-center justify-center gap-2">
+                        <div class="w-[8px] h-[8px] rounded-full bg-gray-900 ring-1 ring-gray-700"></div>
+                      </div>
+                    </div>
+
+                    <!-- Replace hero-home.png with actual app screenshot -->
+                    <img
+                      src="./assets/screenshots/hero-home.png"
+                      alt="GritForge app home screen"
+                      class="w-full h-full object-cover"
+                    />
+
+                    <!-- Home Indicator -->
+                    <div class="absolute bottom-2 left-0 right-0 flex justify-center z-10">
+                      <div class="w-[100px] h-[4px] bg-gray-900/30 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Decorative elements -->
+              <div
+                class="absolute -top-4 -right-4 w-24 h-24 bg-gray-300/50 rounded-full blur-2xl"
+              ></div>
+              <div
+                class="absolute -bottom-4 -left-4 w-32 h-32 bg-gray-400/30 rounded-full blur-2xl"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+          More Than a Habit Tracker
+        </h2>
+        <div class="text-lg text-gray-600 space-y-4">
+          <p>
+            Most habit apps give you a checkbox and call it a day. You tap
+            "done," get a streak number, and move on - never really thinking
+            about what you're building or why.
+          </p>
+          <p class="font-semibold text-dark">GritForge is different.</p>
+          <p>
+            We combine the accountability of goal tracking with the
+            self-awareness of journaling. Each day, you don't just mark progress
+            - you reflect on how it went, capture your thoughts, and receive
+            personalized feedback that actually responds to your journey.
+          </p>
+          <p>
+            Whether you're working toward a big goal or quitting a bad habit,
+            GritForge helps you stay accountable <em>and</em> stay mindful.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+            Everything You Need to Succeed
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Powerful features designed to help you achieve your goals and break
+            bad habits - with smart coaching that adapts to your journey.
+          </p>
+        </div>
+
+        <!-- Feature 1: Three Types of Goals -->
+        <div class="mb-24">
+          <div class="text-center mb-12">
+            <div
+              class="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium mb-4"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              Three Types, Tailored Coaching
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold mb-4">
+              Three Types of Goals, One App
+            </h3>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              GritForge handles every direction of change - with coaching tailored to each.
+              Building a daily exercise habit requires different advice than finishing a novel.
+              Finishing a novel requires different support than quitting smoking.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Goal Type 1: Daily Habits -->
+            <div
+              class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-blue-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                    />
+                  </svg>
+                </div>
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full"
+                  >BUILD</span
+                >
+              </div>
+              <h4 class="text-xl font-bold mb-3">Daily Habits</h4>
+              <p class="text-gray-600 mb-4">
+                Routines you want to do regularly. The goal is
+                <strong>consistency</strong> - showing up day after day until it
+                becomes automatic.
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                Exercise 4x/week, meditate daily, read before bed, journal every evening
+              </p>
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-sm text-gray-600">
+                  <strong class="text-dark">Smart coaching focuses on:</strong>
+                  Triggers, environment design, making habits automatic
+                </p>
+              </div>
+            </div>
+
+            <!-- Goal Type 2: Projects & Milestones -->
+            <div
+              class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"
+                    />
+                  </svg>
+                </div>
+                <span
+                  class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full"
+                  >ACHIEVE</span
+                >
+              </div>
+              <h4 class="text-xl font-bold mb-3">Projects & Milestones</h4>
+              <p class="text-gray-600 mb-4">
+                Big goals you work toward until completion. The goal is
+                <strong>progress</strong> - sustained effort over time until you
+                cross the finish line.
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                Write a novel, launch a business, get certified, train for a marathon
+              </p>
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-sm text-gray-600">
+                  <strong class="text-dark">Smart coaching focuses on:</strong>
+                  Breaking it down, maintaining momentum, next concrete step
+                </p>
+              </div>
+            </div>
+
+            <!-- Goal Type 3: Quit Goals -->
+            <div
+              class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-red-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
+                    />
+                  </svg>
+                </div>
+                <span
+                  class="px-3 py-1 bg-red-100 text-red-700 text-xs font-bold rounded-full"
+                  >QUIT</span
+                >
+              </div>
+              <h4 class="text-xl font-bold mb-3">Break Patterns</h4>
+              <p class="text-gray-600 mb-4">
+                Habits and behaviors you want to eliminate. The goal is
+                <strong>resistance</strong> - building strength to say no, one
+                day at a time.
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                Quit smoking, stop doomscrolling, no stress eating, quit vaping
+              </p>
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-sm text-gray-600">
+                  <strong class="text-dark">Smart coaching focuses on:</strong>
+                  Cravings, triggers, compassionate recovery from slips
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-center text-gray-500 mt-8 max-w-2xl mx-auto">
+            Most apps treat all goals the same - checkbox, streak, done.
+            GritForge recognizes that your journey depends on what you're trying to do,
+            and tailors the coaching to match YOUR specific challenge.
+          </p>
+        </div>
+
+        <!-- Feature 2: Track + Reflect -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-24">
+          <div>
+            <!-- Replace journal-entry.png with actual screenshot -->
+            <div
+              class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100"
+            >
+              <img
+                src="./assets/screenshots/journal-entry.png"
+                alt="GritForge journal entry with smart prompts"
+                class="w-full aspect-square object-cover"
+              />
+            </div>
+          </div>
+          <div>
+            <div
+              class="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium mb-4"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                />
+              </svg>
+              Track + Reflect
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold mb-4">
+              Habit Tracking Meets Journaling
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Every progress entry is a chance to reflect.
+            </p>
+            <p class="text-gray-600 mb-4">
+              When you log your day, GritForge gives you a smart journal
+              prompt based on your goal - a starting point for capturing what
+              happened and how you felt. You can use it as-is for quick logging,
+              or expand on it when you want to dig deeper.
+            </p>
+            <p class="text-gray-600">
+              Over time, your entries become a personal record of your growth -
+              not just what you did, but who you're becoming.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3: Quality Over Quantity -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-24">
+          <div class="order-2 lg:order-1">
+            <div
+              class="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium mb-4"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
+              </svg>
+              Quality Tracking
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold mb-4">
+              Track How You're Really Doing
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Showing up is important. But how you show up matters too.
+            </p>
+            <p class="text-gray-600 mb-4">
+              GritForge lets you log whether each day was:
+            </p>
+            <ul class="space-y-3 text-gray-600 mb-4">
+              <li class="flex items-center gap-3">
+                <span
+                  class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-4 h-4 text-gray-700"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span
+                  ><strong class="text-dark">On Track</strong> - You showed up
+                  and it went well</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="w-6 h-6 rounded-full bg-gray-800 flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-4 h-4 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  ><strong class="text-dark">Struggled</strong> - You showed up
+                  but it was hard</span
+                >
+              </li>
+            </ul>
+            <p class="text-gray-600">
+              This honest tracking gives you a real picture of your journey.
+              Your calendar shows both - so you can see the wins AND acknowledge
+              the tough days.
+            </p>
+          </div>
+          <div class="order-1 lg:order-2">
+            <!-- Replace on-track-toggle.png with actual screenshot -->
+            <div
+              class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100"
+            >
+              <img
+                src="./assets/screenshots/on-track-toggle.png"
+                alt="GritForge on-track vs struggled toggle"
+                class="w-full aspect-square object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 4: Smart Coaching -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-24">
+          <div>
+            <!-- Replace smart-coaching.png with actual screenshot -->
+            <div
+              class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100"
+            >
+              <img
+                src="./assets/screenshots/smart-coaching.png"
+                alt="GritForge smart coaching feedback"
+                class="w-full aspect-square object-cover"
+              />
+            </div>
+          </div>
+          <div>
+            <div
+              class="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium mb-4"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                />
+              </svg>
+              Smart Coaching
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold mb-4">
+              Feedback That Actually Fits
+            </h3>
+            <p class="text-gray-600 mb-4">
+              After you log your progress, GritForge reads what you wrote
+              and responds with personalized feedback - tailored to your specific
+              type of goal.
+            </p>
+            <p class="text-gray-600 mb-4">
+              It knows the difference between building a daily habit and finishing
+              a big project - and coaches you accordingly. Habits get consistency-focused
+              advice. Projects get progress-focused guidance. Quit goals get compassionate
+              resistance support.
+            </p>
+            <p class="text-gray-600 mb-4">
+              On a streak? You'll hear about it. Having a rough patch? You'll
+              get real support - not empty cheerleading. Coming back after time
+              away? You'll be welcomed, not shamed.
+            </p>
+            <p class="text-gray-600 font-medium">
+              It's like having a coach who actually pays attention to your
+              journal - and understands what you're trying to accomplish.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 5: Goal Insights & Stats -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center mb-24">
+          <div class="order-2 lg:order-1">
+            <div
+              class="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium mb-4"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                />
+              </svg>
+              Goal Insights
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold mb-4">
+              Real Stats, Not Just Streaks
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Go beyond a simple streak counter. GritForge gives you a full
+              picture of how you're really doing.
+            </p>
+            <ul class="space-y-3 text-gray-600 mb-4">
+              <li class="flex items-start gap-3">
+                <span
+                  class="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5"
+                >
+                  <svg
+                    class="w-4 h-4 text-orange-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                    />
+                  </svg>
+                </span>
+                <span
+                  ><strong class="text-dark">Momentum Score</strong> - A 0-100
+                  composite of your recent compliance, streak health, and
+                  trend</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <span
+                  class="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5"
+                >
+                  <svg
+                    class="w-4 h-4 text-blue-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  ><strong class="text-dark">Best & Weakest Days</strong> -
+                  Discover which days of the week you perform best and where you
+                  struggle</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <span
+                  class="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5"
+                >
+                  <svg
+                    class="w-4 h-4 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  ><strong class="text-dark">Personal Bests</strong> - Track
+                  your all-time best streak, best week, and longest on-track
+                  run</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <span
+                  class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-0.5"
+                >
+                  <svg
+                    class="w-4 h-4 text-purple-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                    />
+                  </svg>
+                </span>
+                <span
+                  ><strong class="text-dark">Comeback Speed</strong> - See how
+                  fast you bounce back after a break and your next milestone
+                  target</span
+                >
+              </li>
+            </ul>
+            <p class="text-gray-600">
+              Plus weekly comparisons, on-track trends, and milestone countdowns
+              - everything you need to understand your progress at a glance.
+            </p>
+          </div>
+          <div class="order-1 lg:order-2">
+            <!-- Replace goal-insights.png with actual screenshot -->
+            <div
+              class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100"
+            >
+              <img
+                src="./assets/screenshots/goal-insights.png"
+                alt="GritForge goal insights dashboard"
+                class="w-full aspect-square object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Features 6, 7, 8 - Card Grid -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Feature 5: Comeback Support -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-gray-100 flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-7 h-7 text-gray-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">
+              Start Again Without Starting Over
+            </h3>
+            <p class="text-gray-600">
+              Life gets in the way. You'll miss days. Maybe weeks. Maybe longer.
+              Most apps make you feel like a failure when you return. GritForge
+              welcomes you back - with your history intact and a fresh start
+              waiting. Your journey doesn't reset just because you took a
+              detour.
+            </p>
+          </div>
+
+          <!-- Feature 6: Smart Reminders -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-gray-100 flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-7 h-7 text-gray-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Reminders That Work for You</h3>
+            <p class="text-gray-600">
+              Set your schedule - daily, weekly, or custom - and GritForge
+              handles the rest. You'll get regular reminders at the times you
+              choose, milestone celebrations when you hit your goals, and gentle
+              nudges when your streak needs protecting. The more you invest, the
+              more we help you stay on track.
+            </p>
+          </div>
+
+          <!-- Feature 7: Visual Progress -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+          >
+            <div
+              class="w-14 h-14 rounded-xl bg-gray-100 flex items-center justify-center mb-6"
+            >
+              <svg
+                class="w-7 h-7 text-gray-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">See Your Journey at a Glance</h3>
+            <p class="text-gray-600">
+              Your progress comes to life in a calendar view that shows every
+              day of your journey. See patterns emerge. Notice when you're
+              thriving. Acknowledge when you're struggling. Watch the colors
+              fill in as you build consistency over time. It's not just data -
+              it's a visual story of your growth.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Calendar Screenshot -->
+        <div class="mt-16">
+          <!-- Replace calendar-heatmap.png with actual screenshot -->
+          <div
+            class="bg-white rounded-2xl shadow-xl overflow-hidden max-w-3xl mx-auto border border-gray-100"
+          >
+            <img
+              src="./assets/screenshots/calendar-heatmap.png"
+              alt="GritForge calendar heatmap showing on-track vs struggled days"
+              class="w-full h-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+            Get Started in 30 Seconds
+          </h2>
+          <p class="text-xl text-gray-600">
+            Four simple steps to start achieving your goals.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="bg-gray-50 rounded-2xl p-6 h-full">
+            <div class="flex items-center gap-4 mb-4">
+              <span
+                class="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center text-lg font-bold"
+                >1</span
+              >
+              <div
+                class="w-10 h-10 rounded-xl bg-gray-200 flex items-center justify-center"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Pick Your Goal</h3>
+            <p class="text-gray-600">
+              Achieving something new or quitting an old habit? Choose your
+              direction and describe what you're working toward.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-gray-50 rounded-2xl p-6 h-full">
+            <div class="flex items-center gap-4 mb-4">
+              <span
+                class="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center text-lg font-bold"
+                >2</span
+              >
+              <div
+                class="w-10 h-10 rounded-xl bg-gray-200 flex items-center justify-center"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Set Your Schedule</h3>
+            <p class="text-gray-600">
+              Daily, weekly, or something custom. Tell us when you want to be
+              reminded, and we'll keep you accountable.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-gray-50 rounded-2xl p-6 h-full">
+            <div class="flex items-center gap-4 mb-4">
+              <span
+                class="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center text-lg font-bold"
+                >3</span
+              >
+              <div
+                class="w-10 h-10 rounded-xl bg-gray-200 flex items-center justify-center"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Log & Reflect</h3>
+            <p class="text-gray-600">
+              Each day, capture what happened with a quick tap or a longer
+              reflection. Smart prompts make it easy to get started.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="bg-gray-50 rounded-2xl p-6 h-full">
+            <div class="flex items-center gap-4 mb-4">
+              <span
+                class="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center text-lg font-bold"
+                >4</span
+              >
+              <div
+                class="w-10 h-10 rounded-xl bg-gray-200 flex items-center justify-center"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Grow</h3>
+            <p class="text-gray-600">
+              Watch your progress build. Read feedback that fits your journey.
+              Celebrate the wins. Learn from the struggles.
+            </p>
+          </div>
+        </div>
+
+        <!-- Wizard Screenshot -->
+        <div class="mt-16">
+          <!-- Replace wizard-step-*.png files with actual screenshots -->
+          <div class="bg-gray-50 rounded-2xl p-8">
+            <div class="grid md:grid-cols-4 gap-4">
+              <div
+                class="bg-white rounded-xl p-4 text-center border border-gray-200"
+              >
+                <img
+                  src="./assets/screenshots/wizard-step-1.png"
+                  alt="Wizard Step 1: Choose goal type"
+                  class="w-full aspect-[1320/2868] object-cover rounded-lg mb-2"
+                />
+                <p class="text-xs text-gray-500">Goal Type</p>
+              </div>
+              <div
+                class="bg-white rounded-xl p-4 text-center border border-gray-200"
+              >
+                <img
+                  src="./assets/screenshots/wizard-step-2.png"
+                  alt="Wizard Step 2: Describe your goal"
+                  class="w-full aspect-[1320/2868] object-cover rounded-lg mb-2"
+                />
+                <p class="text-xs text-gray-500">Description</p>
+              </div>
+              <div
+                class="bg-white rounded-xl p-4 text-center border border-gray-200"
+              >
+                <img
+                  src="./assets/screenshots/wizard-step-3.png"
+                  alt="Wizard Step 3: Set your schedule"
+                  class="w-full aspect-[1320/2868] object-cover rounded-lg mb-2"
+                />
+                <p class="text-xs text-gray-500">Schedule</p>
+              </div>
+              <div
+                class="bg-white rounded-xl p-4 text-center border border-gray-200"
+              >
+                <img
+                  src="./assets/screenshots/wizard-step-4.png"
+                  alt="Wizard Step 4: Personalize your goal"
+                  class="w-full aspect-[1320/2868] object-cover rounded-lg mb-2"
+                />
+                <p class="text-xs text-gray-500">Personalize</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">Why GritForge?</h2>
+          <p class="text-xl text-gray-600">
+            See how we compare to other habit trackers.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="border-b-2 border-gray-200">
+                <th class="text-left py-4 px-4 font-semibold text-gray-600">
+                  Feature
+                </th>
+                <th class="text-center py-4 px-4 font-semibold text-gray-400">
+                  Other Apps
+                </th>
+                <th class="text-center py-4 px-4 font-semibold text-gray-900">
+                  GritForge
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="py-4 px-4 font-medium">Goal types</td>
+                <td class="py-4 px-4 text-center text-gray-500">
+                  One mode only
+                </td>
+                <td class="py-4 px-4 text-center text-gray-900 font-medium">
+                  Daily habits + Projects + Quit goals (3 tailored modes)
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="py-4 px-4 font-medium">Coaching approach</td>
+                <td class="py-4 px-4 text-center text-gray-500">
+                  Same advice for everything
+                </td>
+                <td class="py-4 px-4 text-center text-gray-900 font-medium">
+                  Tailored: consistency for habits, progress for projects, resistance for quit
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="py-4 px-4 font-medium">Daily logging</td>
+                <td class="py-4 px-4 text-center text-gray-500">
+                  Tap a checkbox
+                </td>
+                <td class="py-4 px-4 text-center text-gray-900 font-medium">
+                  Reflect with journal prompts
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="py-4 px-4 font-medium">Progress tracking</td>
+                <td class="py-4 px-4 text-center text-gray-500">
+                  Just streaks
+                </td>
+                <td class="py-4 px-4 text-center text-gray-900 font-medium">
+                  On-track vs. struggled days
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="py-4 px-4 font-medium">Feedback</td>
+                <td class="py-4 px-4 text-center text-gray-500">
+                  Generic quotes
+                </td>
+                <td class="py-4 px-4 text-center text-gray-900 font-medium">
+                  Responds to YOUR progress
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="py-4 px-4 font-medium">After a break</td>
+                <td class="py-4 px-4 text-center text-gray-500">
+                  Guilt or silence
+                </td>
+                <td class="py-4 px-4 text-center text-gray-900 font-medium">
+                  Welcome back message
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50 transition-colors">
+                <td class="py-4 px-4 font-medium">Analytics</td>
+                <td class="py-4 px-4 text-center text-gray-500">
+                  Basic streak count
+                </td>
+                <td class="py-4 px-4 text-center text-gray-900 font-medium">
+                  Momentum score, trends, best/weakest days, personal bests
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+            Questions & Answers
+          </h2>
+          <p class="text-xl text-gray-600">
+            Everything you need to know about GritForge.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <details class="group bg-white rounded-2xl shadow-sm">
+            <summary
+              class="flex items-center justify-between p-6 cursor-pointer list-none"
+            >
+              <span class="font-semibold text-lg"
+                >What makes GritForge different from other habit trackers?</span
+              >
+              <svg
+                class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600">
+              GritForge combines goal tracking with journaling. Instead of just
+              tapping a checkbox, you reflect on each day with smart
+              prompts and get personalized feedback. Plus, we support both
+              achieving goals AND quitting habits - most apps only handle one.
+            </div>
+          </details>
+
+          <!-- FAQ Item 2 -->
+          <details class="group bg-white rounded-2xl shadow-sm">
+            <summary
+              class="flex items-center justify-between p-6 cursor-pointer list-none"
+            >
+              <span class="font-semibold text-lg"
+                >How does the journaling work?</span
+              >
+              <svg
+                class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600">
+              When you log your progress, GritForge suggests a journal prompt
+              based on your goal. You can use it as-is for quick one-tap
+              logging, or expand on it when you want to write more. Over time,
+              your entries become a record of your journey.
+            </div>
+          </details>
+
+          <!-- FAQ Item 3 -->
+          <details class="group bg-white rounded-2xl shadow-sm">
+            <summary
+              class="flex items-center justify-between p-6 cursor-pointer list-none"
+            >
+              <span class="font-semibold text-lg"
+                >Can I track habits I want to QUIT?</span
+              >
+              <svg
+                class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600">
+              Yes - it's a core feature. When you create a QUIT goal, you get
+              dedicated "Avoided" and "Slipped" buttons, specialized prompts,
+              and feedback designed for breaking habits, not building them.
+            </div>
+          </details>
+
+          <!-- FAQ Item 5 -->
+          <details class="group bg-white rounded-2xl shadow-sm">
+            <summary
+              class="flex items-center justify-between p-6 cursor-pointer list-none"
+            >
+              <span class="font-semibold text-lg"
+                >How does the smart coaching work?</span
+              >
+              <svg
+                class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600">
+              GritForge first recognizes what kind of goal you're working on - daily
+              habit, big project, or quitting a pattern - then tailors its coaching
+              style. Habits get consistency-focused advice about triggers and routines.
+              Projects get progress-focused guidance about momentum and next steps.
+              Quit goals get compassionate resistance support. It's not generic
+              motivation - it actually responds to what you wrote and how your
+              journey is going.
+            </div>
+          </details>
+
+          <!-- FAQ Item 6 -->
+          <details class="group bg-white rounded-2xl shadow-sm">
+            <summary
+              class="flex items-center justify-between p-6 cursor-pointer list-none"
+            >
+              <span class="font-semibold text-lg">Is my data private?</span>
+              <svg
+                class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-600">
+              Yes. Your data stays on secure servers and is never sold. We use
+              encryption for sensitive information, and you can delete your
+              account and data anytime. We're GDPR and CCPA compliant.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="download" class="py-20 px-4 sm:px-6 lg:px-8 gradient-bg">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+          Ready to Achieve Your Goals?
+        </h2>
+        <p class="text-xl text-white/90 mb-10">
+          Start tracking, reflecting, and growing - all in one app.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <!-- App Store Button -->
+          <a href="#" class="inline-block hover:opacity-80 transition-opacity">
+            <img
+              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+              alt="Download on the App Store"
+              class="h-14"
+            />
+          </a>
+
+          <!-- Google Play Button -->
+          <a href="#" class="inline-block hover:opacity-80 transition-opacity">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Get it on Google Play"
+              class="h-14"
+            />
+          </a>
+        </div>
+
+        <p class="text-white/70 text-sm">
+          Available on iOS and Android | 30-second setup
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-12 mb-12">
+          <!-- Brand -->
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-3 mb-4">
+              <img
+                src="./assets/splash-icon-dark.png"
+                alt="GritForge"
+                class="w-12 h-12 rounded-lg"
+              />
+              <span class="text-2xl font-bold">GritForge</span>
+            </div>
+            <p class="text-gray-400 mb-4 max-w-sm">
+              Forge Your Grit. Build Your Life.
+            </p>
+            <p class="text-gray-500 text-sm">
+              The habit tracker that helps you think, not just check boxes.
+            </p>
+          </div>
+
+          <!-- Links -->
+          <div>
+            <h4 class="font-semibold mb-4">Product</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#features"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#how-it-works"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#faq"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h4 class="font-semibold mb-4">Legal</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="privacy.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="terms.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:support@gritforge.io"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p class="text-gray-500 text-sm">
+            &copy; 2026 GritForge. All rights reserved.
+          </p>
+          <div class="flex gap-4">
+            <a
+              href="https://www.instagram.com/_gritforge/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.tiktok.com/@_gritforge"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
